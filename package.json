@@ -4,6 +4,7 @@
   "description": "GentleUI is a user interface design library that emphasizes rounded corners and a poetic aesthetic.",
   "main": "dist/main.umd.js",
   "module": "dist/main.js",
+  "types": "dist/main.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,8 +12,8 @@
   },
   "exports": {
     ".": {
-      "import": "dist/export.js",
-      "require": "dist/export.umd.js"
+      "import": "./dist/export.js",
+      "require": "./dist/export.umd.js"
     }
   },
   "repository": {
@@ -37,6 +38,8 @@
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@vitejs/plugin-vue": "^4.0.0",
+    "pug": "^3.0.2",
+    "sass": "^1.57.1",
     "vite": "^4.0.4",
     "vue-tsc": "^1.0.24"
   }
