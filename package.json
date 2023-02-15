@@ -36,7 +36,12 @@
     "url": "https://github.com/xiao-e-yun/GentleUI/issues"
   },
   "homepage": "https://github.com/xiao-e-yun/GentleUI#readme",
-  "files": ["dist"],
+  "files": [
+    "package.json",
+    "readme.md",
+    "LICENSE",
+    "dist"
+  ],
   "dependencies": {
     "typescript": "^4.9.4",
     "vue": "^3.2.45"
