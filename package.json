@@ -7,7 +7,6 @@
   "types": "dist/main.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build && vue-tsc",
     "watch": "vite build --watch"
   },
@@ -38,9 +37,9 @@
   "homepage": "https://github.com/xiao-e-yun/GentleUI#readme",
   "files": [
     "package.json",
-    "readme.md",
+    "README.md",
     "LICENSE",
-    "dist"
+    "dist/**"
   ],
   "dependencies": {
     "typescript": "^4.9.4",
