@@ -1,0 +1,75 @@
+@use "color";
+@use "vars";
+
+:root {
+  --focus: 9, 179, 108;
+  --main: 51, 51, 51;
+  --side-1: 170, 160, 200;
+  --side-2: 172, 163, 217;
+  --side-3: 240, 230, 250;
+  --bg: 253, 248, 242;
+  --white: 242, 242, 242;
+  --black: 38, 38, 38;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --focus: 66, 185, 131;
+    --main: 255, 242, 232;
+    --side-1: 100, 100, 120;
+    --side-2: 99, 99, 153;
+    --side-3: 66, 66, 102;
+    --bg: 49, 48, 51;
+  }
+}
+  
+img {
+  display: block;
+  border: none;
+  width: 100%;
+  padding: 0;
+}
+
+p {
+  margin: .2em;
+}
+
+* {
+  fill: color.main();
+  color: color.main();
+  box-sizing: border-box;
+  font-family: "Microsoft JhengHei";
+}
+
+body {
+  background-color: color.bg();
+  overflow: hidden auto;
+  font-size: 24px;
+  width: 100%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: color.focus();
+  font-weight: bold;
+}
+
+hr {
+  background-color: color.main();
+  border-style: solid;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 .1em color.side-3();
+  background-color: color.side-2();
+}
+
+::-webkit-scrollbar {
+  background-color: color.side-3();
+  width: .6em;
+}

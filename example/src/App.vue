@@ -1,29 +1,63 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import gentleUi from "gentle-ui/base.module.scss"
+import "gentle-ui/base.scss"; // add base style in here
+
+import { Image, Block, Content, Code, Button, ButtonGroup } from "gentle-ui"
+import { computed, ref } from "vue";
+
+import GetStart from "./pages/get_start.vue"
+import Docs from "./pages/docs.vue"
+
+let hash = ref(location.hash)
+window.addEventListener('hashchange', function () { hash.value = location.hash }, false);
+const path = computed(()=>({
+  "": GetStart,
+  "docs": Docs,
+})[hash.value.replace("#","")])
+console.log(path)
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
+  <header :class="[$style.header, gentleUi.shadow]">
+    <a href="/#">
+      <img src="/favicon.svg" :class="[gentleUi.dropShadow, $style.logo]" />
     </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <nav :class="$style.nav">
+      <a href="/#">Get Start</a>
+      <a href="/#docs">Docs</a>
+      <a href="https://github.com/xiao-e-yun/GentleUI" target="_blank">Github</a>
+    </nav>
+  </header>
+  <Content>
+    <component v-if="path" :is="path" />
+    <Block v-else>Not Found</Block>
+  </Content>
 </template>
 
-<style scoped>
+<style module lang="scss">
+//else you can add here 
+//@import "gentle-ui/base.scss"; 
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+  height: 100%;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.header {
+  background: color.side-3();
+  padding: .3em;
+  height: 2em;
+
+  display: flex;
+  justify-content: space-between;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.nav {
+  display: flex;
+  gap: 1.2em;
+
+  &>a {
+    text-shadow: 0 0 .2em color.black();
+    color: color.main();
+  }
 }
 </style>

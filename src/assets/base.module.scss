@@ -1,0 +1,144 @@
+@use "color";
+@use "vars";
+
+// export 
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+//=====================================================================================
+//  Flex
+//=====================================================================================
+.content {
+  padding: vars.$margin;
+  max-width: 1800px;
+  margin: auto;
+  width: 100%;
+
+  &>.block {
+    animation: fadein .5s;
+    margin-bottom: vars.$margin;
+  }
+}
+
+//=====================================================================================
+//  Block
+//=====================================================================================
+:where(.block) {
+  padding: 0.2em;
+  @include vars.block;
+
+  //padding-less
+  &.padless {
+    padding: 0;
+  }
+
+  //background
+  background: color.side-3();
+
+  &> :where(.block) {
+    margin: vars.$margin;
+    background: color.side-2();
+
+    &> :where(.block) {
+      background: color.side-1();
+    }
+  }
+}
+
+//=====================================================================================
+//  Image
+//=====================================================================================
+.image {
+  width: calc(50%);
+  visibility: hidden;
+  margin: vars.$margin auto;
+
+  &[src] {
+    animation: fadein .5s;
+    visibility: visible;
+  }
+}
+
+//=====================================================================================
+//  Code
+//=====================================================================================
+.code {
+  display: block;
+  font-size: .7em;
+  white-space: nowrap;
+  max-width: 100%;
+  word-break: keep-all;
+  width: fit-content;
+  background: color.bg();
+  font-family: monospace;
+  margin: vars.$margin auto;
+  overflow: auto;
+}
+
+.code-inline {
+  display: inline-block;
+  margin: 0 .2em;
+}
+
+//=====================================================================================
+//  Button
+//=====================================================================================
+.button {
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  padding: .2em .5em;
+  margin: vars.$margin auto;
+  background: color.side-2();
+
+  &:hover {
+    background: color.bg(.8);
+  }
+}
+
+.button-group {
+  display: flex;
+  width: fit-content;
+  margin: vars.$margin auto;
+  background: color.side-2();
+
+  &>.button {
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+//=====================================================================================
+//  Shadow
+//=====================================================================================
+.shadow {
+  box-shadow: 0 0 .2em color.black();
+}
+
+.shadowMain {
+  box-shadow: 0 0 .2em color.main();
+}
+
+.textShadow {
+  text-shadow: 0 0 .2em color.black();
+}
+
+.textShadowMain {
+  text-shadow: 0 0 .2em color.main();
+}
+
+.dropShadow {
+  filter: drop-shadow(0 0 .2em color.black());
+}
+
+.dropShadowMain {
+  filter: drop-shadow(0 0 .2em color.main());
+}

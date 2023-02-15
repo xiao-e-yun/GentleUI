@@ -1,0 +1,10 @@
+@use "color";
+
+$border:  solid 2px;
+$margin: 1rem;
+
+@mixin block() {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 .2em color.black();
+}
