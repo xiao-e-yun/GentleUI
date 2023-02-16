@@ -1,6 +1,6 @@
 {
   "name": "gentle-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GentleUI is a user interface design library that emphasizes rounded corners and a poetic aesthetic.",
   "main": "dist/main.umd.js",
   "module": "dist/main.js",
@@ -42,12 +42,12 @@
     "dist/**/*"
   ],
   "dependencies": {
-    "typescript": "^4.9.4",
     "vue": "^3.2.45"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@vitejs/plugin-vue": "^4.0.0",
+    "typescript": "^4.9.4",
     "pug": "^3.0.2",
     "sass": "^1.57.1",
     "vite": "^4.0.4",
