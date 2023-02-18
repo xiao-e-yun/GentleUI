@@ -14,7 +14,7 @@
 }
 
 //=====================================================================================
-//  Flex
+//  Layouts
 //=====================================================================================
 .content {
   padding: vars.$margin;
@@ -25,6 +25,61 @@
   &>.block {
     animation: fadein .5s;
     margin-bottom: vars.$margin;
+  }
+}
+
+.header {
+  top: 0;
+  height: 2em;
+  padding: .3em;
+  border-radius: 0;
+  position: sticky;
+  text-transform: capitalize;
+  
+  display: flex;
+  justify-content: space-between;
+  
+  $size: 2em - .3em * 2;
+  & > .home {
+    display: flex;
+    color: color.main();
+    animation: fadein .5s .5s both;
+    
+    & > .logo {
+      width: $size;
+      height: $size;
+      margin-right: .3em;
+      animation: logoMoveIn 1s .8s both;
+
+      @keyframes logoMoveIn {
+        0% {
+          width: 0;
+          opacity: 0;
+        }
+        50% {
+          width: $size;
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  & > .nav {
+    counter-reset:num -1;
+    display: flex;
+    gap: 1.2em;
+  
+    & > a {
+      counter-increment:num;
+      animation: fadein .5s calc(counter(num) * .5s + .2s) both;
+      &:not([target="_blank"]) {
+        text-shadow: 0 0 .2em color.black();
+        color: color.main();
+      }
+    }
   }
 }
 
@@ -41,15 +96,11 @@
   }
 
   //background
-  background: color.side-3();
+  background: color.side-2();
 
   &> :where(.block) {
     margin: vars.$margin;
-    background: color.side-2();
-
-    &> :where(.block) {
-      background: color.side-1();
-    }
+    background: color.side-1();
   }
 }
 
@@ -97,7 +148,7 @@
   font-weight: 600;
   padding: .2em .5em;
   margin: vars.$margin auto;
-  background: color.side-2();
+  background: color.side-1();
 
   &:hover {
     background: color.bg(.8);
@@ -108,7 +159,7 @@
   display: flex;
   width: fit-content;
   margin: vars.$margin auto;
-  background: color.side-2();
+  background: color.side-1();
 
   &>.button {
     box-shadow: none;

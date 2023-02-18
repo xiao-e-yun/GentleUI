@@ -19,10 +19,6 @@
   @return opacity("var(--side-2)",$opacity);
 }
 
-@function side-3($opacity: 1) {
-  @return opacity("var(--side-3)",$opacity);
-}
-
 @function bg($opacity: 1) {
   @return opacity("var(--bg)",$opacity);
 }

@@ -1,8 +1,11 @@
+//import Layouts
+import Header from "./Layouts/Header.vue"
+import Content from "./Layouts/Content.vue"
+//import Components
 import Code from "./components/Code.vue"
 import Image from "./components/Image.vue"
 import Block from "./components/Block.vue"
 import Button from "./components/Button.vue"
-import Content from "./components/Content.vue"
 import ButtonGroup from "./components/ButtonGroup.vue"
 
 declare global {
@@ -18,6 +21,7 @@ export {
   Image,
   Block,
   Button,
+  Header,
   Content,
   ButtonGroup,
 }
