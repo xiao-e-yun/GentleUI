@@ -21,7 +21,7 @@ const props = withDefaults(
 )
 
 const length = props.links ? props.links.length - 1 : 0
-function isBlank(target: string | undefined, str: string) { return target === 'blank' ? str : undefined } 
+function isBlank(target: string | undefined, str: string) { return target === 'blank' ? str : undefined }
 </script>
 
 <template>

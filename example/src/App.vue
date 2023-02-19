@@ -21,7 +21,11 @@ const links = [
   {name: "Get Start", href: "/#"},
   {name: "Docs", href: "/#docs"},
   {name: "GitHub", href: "//github.com/xiao-e-yun/GentleUI", target: "blank"},
-]
+] as {
+  name: string;
+  href: string;
+  target?: "blank" | "self" | undefined;
+}[]
 </script>
 
 <template>
@@ -37,6 +41,6 @@ const links = [
 </template>
 
 <style module lang="scss">
-//else you can add here 
-//@import "gentle-ui/base.scss"; 
+//else you can add here
+//@import "gentle-ui/base.scss";
 </style>
