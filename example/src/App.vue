@@ -18,8 +18,8 @@ const path = computed(() => ({
 
 // Header Links
 const links = [
-  {name: "Get Start", href: "/#"},
-  {name: "Docs", href: "/#docs"},
+  {name: "Get Start", href: "#"},
+  {name: "Docs", href: "#docs"},
   {name: "GitHub", href: "//github.com/xiao-e-yun/GentleUI", target: "blank"},
 ] as {
   name: string;
@@ -30,8 +30,9 @@ const links = [
 
 <template>
   <Header
-    titleHref="/#"
+    titleHref="#"
     title="Gentle UI"
+    titleImage="./favicon.svg"
     :links="links"
   />
   <Content>
