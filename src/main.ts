@@ -5,6 +5,7 @@ import Content from "./Layouts/Content.vue"
 import Code from "./components/Code.vue"
 import Image from "./components/Image.vue"
 import Block from "./components/Block.vue"
+import Popper from "./components/Popper.vue"
 import Button from "./components/Button.vue"
 import ButtonGroup from "./components/ButtonGroup.vue"
 
@@ -20,6 +21,7 @@ export {
   Code,
   Image,
   Block,
+  Popper,
   Button,
   Header,
   Content,

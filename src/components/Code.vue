@@ -8,5 +8,5 @@ const classList = [GentleUI.block,GentleUI.code,inline]
 </script>
 
 <template>
-  <code :class="classList"><slot/></code>
+  <code :class="classList" v-bind="$attrs"><slot/></code>
 </template>

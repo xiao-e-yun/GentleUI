@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Image, Block, Content, Code, Button, ButtonGroup } from "gentle-ui"
+import { Image, Block, Content, Code, Button, ButtonGroup, Popper } from "gentle-ui"
 </script>
 
 <template>
@@ -72,6 +72,18 @@ import { Image, Block, Content, Code, Button, ButtonGroup } from "gentle-ui"
       <Block>
         <h3>Preview</h3>
         <ButtonGroup><Button>Frist</Button><Button>Second</Button></ButtonGroup>
+      </Block>
+
+    </Block>
+
+    <Block>
+      <h2>Popper</h2>
+
+      <Code>&lt;Popper tooltip=&quot;Hello&quot;&gt;&lt;Button&gt;Hover on me&lt;/Button&gt;&lt;/Popper&gt;</Code>
+
+      <Block>
+        <h3>Preview</h3>
+        <Popper tooltip="Hello"><Button>Hover on me</Button></Popper>
       </Block>
 
     </Block>

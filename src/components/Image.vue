@@ -27,6 +27,5 @@ const watcher = watch(imageEl, value => {
 </script>
 
 <template>
-  <img v-once ref="imageEl" v-bind="$attrs" :alt="props.alt" :data-src="props.src" style="aspect-ratio: 16 / 9;" :class="[GentleUI.block,GentleUI.padless,GentleUI.image]"
-    :loading="lazyload ? 'lazy' : 'eager'">
+  <img v-once ref="imageEl" v-bind="$attrs" :alt="props.alt" :data-src="props.src" :class="[GentleUI.block,GentleUI.padless,GentleUI.image]">
 </template>

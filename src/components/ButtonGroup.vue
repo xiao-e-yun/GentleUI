@@ -6,7 +6,7 @@ import GentleUI from "../assets/base.module.scss"
 </script>
 
 <template>
-<Block :class="[GentleUI['button-group'],GentleUI.padless]">
+<Block v-bind="$attrs" :class="[GentleUI['button-group'],GentleUI.padless]">
   <slot/>  
 </Block>
 </template>

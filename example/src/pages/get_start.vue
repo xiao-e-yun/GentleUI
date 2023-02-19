@@ -5,7 +5,7 @@ import { Block, Code } from "gentle-ui"
 <template>
   <Block>
     <h1>1. set default vars and functions</h1>
-    In <Code :inline="true">vite.config.ts</Code>
+    <p>In <Code :inline="true">vite.config.ts</Code></p>
     <Code>
       import { defineConfig } from &apos;vite&apos;<br>
       import vue from &apos;@vitejs/plugin-vue&apos;<br>
@@ -25,17 +25,17 @@ import { Block, Code } from "gentle-ui"
     </Code>
 
     <h1>2. set default style</h1>
-    In <Code :inline="true">main.ts</Code> or <Code :inline="true">App.vue[script]</Code>
+    <p>In <Code :inline="true">main.ts</Code> or <Code :inline="true">App.vue[script]</Code></p>
     <Code>
-    import "gentle-ui/base.scss";
-    </Code>
-    Else <Code :inline="true">App.vue[style.scss]</Code>
+      import "gentle-ui/base.scss";
+      </Code>
+    <p>Else <Code :inline="true">App.vue[style.scss]</Code></p>
     <Code>
-    @import "gentle-ui/base.scss";
+      @import "gentle-ui/base.scss";
     </Code>
 
     <h1>3. get base module</h1>
-    In <Code :inline="true">Any.vue[script]</Code>
+    <p>In <Code :inline="true">Any.vue[script]</Code></p>
     <Code>
       import gentleUi from "gentle-ui/base.module.scss";<br>
       import { Block, /*Other...*/ } from "gentle-ui";
